@@ -12,21 +12,24 @@ const Logement = () => {
             <Carousel />
             <div>
                 <div>
-                    <h1>Cozy loft on the Canal Saint-Martin</h1>
-                    <p>Paris, Île-de-France</p>
+                    <h1>title</h1>
+                    <p>location</p>
                     <div>
-                        <p>Cozy</p>
-                        <p>Canal</p>
-                        <p>Paris 10</p>
+                        <p>tags</p>
                     </div>
                     <div>
-                        <p>Alexandre Dumas</p>
+                        <p>host.name</p>
+                        <img src="hoste.picture" alt="photo de l'hote" />
+                        
                         <div>
-                         <p>Etoiles</p>   
+                         <p>rating = étoiles</p>   
                         </div>
                     </div>
                 </div>
                 <Collapse />
+                {/* Dans ce collapse on à la description */}
+                <Collapse />
+                {/* Dans ce collapse on à le tableau [equipments] */}
                 <Footer />
             </div>
             

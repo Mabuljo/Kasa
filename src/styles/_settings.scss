@@ -1,0 +1,31 @@
+// regroupe toutes les variables, mixin et style général du projet
+
+// Général
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 50px; // ne fonctionne pas!
+}
+
+* {
+    font-family: "Monserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    &:visited {
+        color: black;
+    }
+}
+
+li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
