@@ -1,9 +1,16 @@
 import React from "react";
+import Header from "../components/Header";
+import Collapse from "../components/Collapse";
+import Footer from "../components/Footer";
+import Banner from "../components/Banner";
 
 const About = () => {
   return (
     <div>
-      <h1>A propos</h1>
+      <Header />
+      <Banner />
+      <Collapse />
+      <Footer />
     </div>
   );
 };
