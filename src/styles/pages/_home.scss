@@ -1,0 +1,16 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 340px 340px 340px;  
+    justify-content: center; 
+    border-radius: 25px;
+    background: $color-background;
+    gap: 50px;
+    padding: 56px 50px 43px 50px;
+    @include margin;
+    box-sizing: border-box;
+}

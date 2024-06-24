@@ -1,15 +1,12 @@
 import React from 'react';
-import Header from '../components/Header';
-import Carousel from '../components/Carousel';
 import Collapse from '../components/Collapse';
-import Footer from '../components/Footer';
+import Gallery from '../components/Gallery';
 
 
 const Logement = () => {
     return (
         <div>
-            <Header />
-            <Carousel />
+            <Gallery />
             <div>
                 <div>
                     <h1>title</h1>
@@ -19,7 +16,7 @@ const Logement = () => {
                     </div>
                     <div>
                         <p>host.name</p>
-                        <img src="hoste.picture" alt="photo de l'hote" />
+                        <img src="hoste.picture" alt="l'hote" />
                         
                         <div>
                          <p>rating = étoiles</p>   
@@ -30,7 +27,6 @@ const Logement = () => {
                 {/* Dans ce collapse on à la description */}
                 <Collapse />
                 {/* Dans ce collapse on à le tableau [equipments] */}
-                <Footer />
             </div>
             
         </div>

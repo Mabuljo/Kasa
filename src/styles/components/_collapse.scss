@@ -1,0 +1,31 @@
+.collapse {
+    &__title {
+        padding: 10px 20px 10px 15px;
+        border-radius: 5px;
+        background: $main-color;
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__content {
+        background: $color-background;
+        padding: 10px 10px 10px 20px;
+        font-size: 20px;
+        font-weight: 500;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    &__icon {
+        transition: transform 0.7s ease;
+
+        &--open {
+            transform: rotate(180deg);
+        }
+    }
+}

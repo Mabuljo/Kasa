@@ -6,10 +6,14 @@ const Header = () => {
     <div className="navBar">
       <img src="./logo.svg" alt="logo Kasa" />
       <ul className="navBar__link">
-        <NavLink to="/">
+        <NavLink to="/" className={(nav) => 
+            nav.isActive ? "nav-active" : ""
+          }>
           <li>Accueil</li>
         </NavLink>
-        <NavLink to="/about">
+        <NavLink to="/about" className={(nav) => 
+            nav.isActive ? "nav-active" : ""
+          }>
           <li>À propos</li>
         </NavLink>
       </ul>

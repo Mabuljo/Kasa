@@ -1,0 +1,23 @@
+.error {
+    @include display;
+    flex-direction: column;
+    gap:139px;
+    padding-top: 139px;
+    padding-bottom: 139px;
+
+    h1 {
+        color: $main-color;
+        font-size: 288px;
+    }
+
+    h2 {
+        color: $main-color;
+        font-size: 36px;
+        font-weight: 500;
+    }
+    a {
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+}
