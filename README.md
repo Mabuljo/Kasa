@@ -1,3 +1,17 @@
+# Projet Kasa : Créer une application web de location immobilière avec React
+
+Implémenter le front-end d’une application en utilisant React et React Router pour créer une expérience utilisateur moderne et réactive.
+
+Travailler sur la logique de présentation des données et les composants React, une bibliothèque JavaScript populaire pour la création d'interfaces utilisateur.
+
+Utiliser React Router pour configurer la navigation entre les différentes pages de l'application pour permettre de comprendre comment gérer efficacement le routage dans une application web moderne.
+
+Le projet se concentre exclusivement sur le développement front-end, en se basant sur les maquettes fournies et en utilisant des données simulées extraites d'un fichier JSON.
+
+Utilisation de Create React App, Node.js, Sass.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
