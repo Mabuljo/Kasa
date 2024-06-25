@@ -1,3 +1,25 @@
+@keyframes appearContent {
+    from {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes disappearContent {
+    from {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+    to {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+}
+
 .collapse {
     &__title {
         padding: 10px 20px 10px 15px;
@@ -13,12 +35,26 @@
     }
 
     &__content {
-        background: $color-background;
-        padding: 10px 10px 10px 20px;
-        font-size: 20px;
-        font-weight: 500;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
+        @include collapseContent;
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        
+        &--open {
+            transform-origin: top;
+            @include collapseContent;
+            opacity: 1;
+            height: 100%;
+            animation: appearContent 0.7s ease-in-out;
+        }
+
+        &--close {
+            transform-origin: top;
+            @include collapseContent;
+            opacity: 1;
+            height: 100%;
+            animation: disappearContent 0.7s ease-in-out forwards;
+        }
     }
 
     &__icon {
@@ -26,6 +62,10 @@
 
         &--open {
             transform: rotate(180deg);
+        }
+
+        &--close {
+            transform: rotate(0deg);
         }
     }
 }
