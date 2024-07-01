@@ -2,25 +2,41 @@
     @include display;
     @include margin;
     position: relative;
+    @media (max-width:1024px){
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
-     img {
+    img {
         object-fit: cover;
         width: 100%;
         height: 223px;
         border-radius: 25px;
         filter: brightness(60%); // Rend l'image plus sombre
-     }
+        @media (max-width:768px){
+            height:111px ;
+        }
+    }
 
-     h1 {
+    h1 {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
         font-size: 48px;
-        margin: 0;
         color: white;
         text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         white-space: nowrap; // Empêche le texte de se diviser en plusieurs lignes
+        @media (max-width:390px){
+            width: 100%;
+            text-align: start;
+            white-space: inherit;
+
+        }
+        @media (max-width:768px){
+            font-size: 24px;     
+            text-align: start;
+        }
     }
 }

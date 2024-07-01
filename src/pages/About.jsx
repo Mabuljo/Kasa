@@ -11,7 +11,7 @@ const About = () => {
       <div className="collapses">
         {collapsesDatas.map((collapse) => (
           <Collapse key={collapse.id} title={collapse.title} description={collapse.content}/>
-      ))}
+        ))}
       </div>
     </div>
   );

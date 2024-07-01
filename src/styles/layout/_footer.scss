@@ -8,5 +8,23 @@
     gap: 20px;
     padding-top: 60px;
     padding-bottom: 30px;
+    @media (max-width:768px){
+        padding-bottom: 60px;
     }
+
+
+    img {
+        @media (max-width:768px){
+            width: 122px;
+        }
+    }
+
+    p {
+        @media (max-width:768px){
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+    }
+}
 

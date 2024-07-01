@@ -9,15 +9,17 @@ html, body {
 #root {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     gap: 50px;
+    @media (max-width:1024px){
+        gap: 30px;
+    }
 }
 
 * {
     font-family: "Monserrat", sans-serif;
 }
 
-h1, h2 {
+h1, h2, p {
     margin: 0;
 }
 
@@ -28,7 +30,7 @@ a {
     }
 }
 
-li {
+ul, li {
     list-style: none;
     margin-left: 0;
     padding-left: 0;

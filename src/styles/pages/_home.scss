@@ -2,10 +2,13 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    @media (max-width:768px){
+        gap: 22px;
+    }
 }
 .cards {
     display: grid;
-    grid-template-columns: 340px 340px 340px;  
+    grid-template-columns: 1fr 1fr 1fr;  
     justify-content: center; 
     border-radius: 25px;
     background: $color-background;
@@ -13,4 +16,11 @@
     padding: 56px 50px 43px 50px;
     @include margin;
     box-sizing: border-box;
+    @media (max-width: 1024px){
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 20px;
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
 }

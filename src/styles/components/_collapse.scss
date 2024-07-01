@@ -1,59 +1,45 @@
-@keyframes appearContent {
-    from {
-        opacity: 0;
-        transform: scaleY(0);
-    }
-    to {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-}
-
-@keyframes disappearContent {
-    from {
-        opacity: 1;
-        transform: scaleY(1);
-    }
-    to {
-        opacity: 0;
-        transform: scaleY(0);
-    }
-}
-
 .collapse {
     &__title {
         padding: 10px 20px 10px 15px;
         border-radius: 5px;
         background: $main-color;
         color: white;
-        font-size: 24px;
-        font-weight: 700;
         display: flex;
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+        @media (max-width:768px){
+            font-size: 13px;
+        }
     }
 
     &__content {
         @include collapseContent;
         overflow: hidden;
-        height: 0;
+        max-height: 0;
         opacity: 0;
+        transition: max-height 1s cubic-bezier(0, 1, 0, 1), opacity 0.7s ease-in;
         
         &--open {
             transform-origin: top;
             @include collapseContent;
             opacity: 1;
-            height: 100%;
-            animation: appearContent 0.7s ease-in-out;
+            font-size: 18px;
+            max-height: 1000px;
+            @media (max-width:768px){
+                font-size: 13px;
+            }
         }
 
         &--close {
             transform-origin: top;
             @include collapseContent;
-            opacity: 1;
-            height: 100%;
-            animation: disappearContent 0.7s ease-in-out forwards;
+            opacity: 0;
+            max-height: 0;
+            font-size: 18px;
+            @media (max-width:768px) { 
+                font-size: 13px;
+            }
         }
     }
 
