@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Collapse from '../components/Collapse';
-import Gallery from '../components/Gallery';
+import Carousel from '../components/Carousel';
 import { useNavigate, useParams } from 'react-router-dom';
 import logementsData from "../datas/logements.json";
 import Tags from '../components/Tags';
@@ -35,15 +35,15 @@ const Logement = () => {
 
     return (
         <section className="logement-container">
-            <Gallery />
+            <Carousel pictures={appart.pictures}/>
             <div className="appart">
                 <div className="appart__content">
                     <div className="appart__content--details">
                         <h1>{ appart.title }</h1>
                         <p>{ appart.location }</p>
                         <div className="tags">
-                            {appart.tags.map((tag) => (
-                                <Tags tag={tag} />
+                            {appart.tags.map((tag, index) => (
+                                <Tags key={index} tag={tag} />
                             ))}
                         </div>
                     </div>
@@ -56,12 +56,14 @@ const Logement = () => {
                     <div className="appart__collapses--collapse">
                     <Collapse  title="Description" description={appart.description}/></div>
                     <div className="appart__collapses--collapse">
-                    <Collapse className="appart__collapses--collapse" title="Équipements" description={
-                        <ul>
-                        {appart.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}
-                        </ul>
-                    }/></div>
-                   
+                        <Collapse className="appart__collapses--collapse" title="Équipements" description={
+                            <ul>
+                                {appart.equipments.map((equipment, index) =>
+                                    <li key={index}>{equipment}</li>
+                                )}
+                            </ul>
+                        }/>
+                    </div>
                 </div>
             </div>   
         </section>

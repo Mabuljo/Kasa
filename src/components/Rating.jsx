@@ -4,8 +4,8 @@ const Rating = (star) => {
     const scoreTotal = [1, 2, 3, 4, 5];
     return (
         <div className="stars">
-            {scoreTotal.map((score) =>
-            star.rating >= score ? (<i class="fa-solid fa-star fa-lg red-star"></i>):(<i class="fa-solid fa-star fa-lg grey-star "></i>)
+            {scoreTotal.map((score, index) =>
+                star.rating >= score ? (<i className="fa-solid fa-star fa-lg red-star" key={index}></i>):(<i className="fa-solid fa-star fa-lg grey-star" key={index}></i>)
             )}  
         </div>
     );

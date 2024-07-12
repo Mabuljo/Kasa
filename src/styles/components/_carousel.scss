@@ -1,0 +1,46 @@
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	width: 100%;
+    min-height: 415px;
+    position: relative;
+    @media (max-width:768px){
+        max-height: 255px;
+    }
+
+    &__picture {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+	    object-position: center;
+        border-radius: 25px;
+        background: lightgray 50% / cover no-repeat;
+    }
+    .arrow {
+        position: absolute;
+        cursor: pointer;
+        @media (max-width:768px){
+            height: 24px;
+        }
+    }
+
+    .arrow-left {
+        left: 20px;
+    }
+    .arrow-right {
+        right: 20px;
+    }
+
+    &__compteur {
+        position: absolute;
+        color: white;
+        bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+    }
+}

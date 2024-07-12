@@ -15,7 +15,7 @@ const Collapse = ({title, description}) => {
                 <i className={`fa-solid fa-chevron-up collapse__icon ${isOpen ? " collapse__icon--open" : " collapse__icon--close"}`}></i>
             </div>
             <div className={`collapse__content ${isOpen ? "collapse__content--open" : "collapse__content--close"}`}>
-                <p>{description}</p>
+                {description}
             </div>
         </div>
     );
